@@ -46,6 +46,16 @@ idea {
     }
 }
 
+shadowJar {
+    baseName = project.name
+    version = ''
+    classifier = 'uber'
+
+    exclude 'META-INF/*.DSA'
+    exclude 'META-INF/*.RSA'
+    exclude 'META-INF/*.SF'
+}
+
 //some CI config
 apply from: file("gradle/ci.gradle")
 
